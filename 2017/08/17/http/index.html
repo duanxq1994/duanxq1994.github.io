@@ -78,11 +78,13 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="http," />
 
 
 
 
+
+  <link rel="alternate" href="/atom.xml" title="笔记" type="application/atom+xml" />
 
 
 
@@ -95,13 +97,14 @@
 
 
 <meta name="description" content="首先maven 依赖12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.apache.httpcomponents&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;httpmime&amp;lt;/artifactId&amp;gt;    &amp;lt;version&amp;gt;4.3.6&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt">
+<meta name="keywords" content="http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 httpclient 发送post请求">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/http/index.html">
 <meta property="og:site_name" content="笔记">
 <meta property="og:description" content="首先maven 依赖12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.apache.httpcomponents&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;httpmime&amp;lt;/artifactId&amp;gt;    &amp;lt;version&amp;gt;4.3.6&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-17T16:11:21.227Z">
+<meta property="og:updated_time" content="2017-08-23T16:51:56.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 httpclient 发送post请求">
 <meta name="twitter:description" content="首先maven 依赖12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.apache.httpcomponents&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;httpmime&amp;lt;/artifactId&amp;gt;    &amp;lt;version&amp;gt;4.3.6&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt">
@@ -356,6 +359,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/http/" itemprop="url" rel="index">
+                    <span itemprop="name">http</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -384,7 +409,7 @@
 
       
         <h3 id="首先maven-依赖"><a href="#首先maven-依赖" class="headerlink" title="首先maven 依赖"></a>首先maven 依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.httpcomponents<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>httpmime<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.3.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.http.HttpEntity;</div><div class="line"><span class="keyword">import</span> org.apache.http.client.methods.CloseableHttpResponse;</div><div class="line"><span class="keyword">import</span> org.apache.http.client.methods.HttpPost;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.ContentType;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.mime.HttpMultipartMode;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.mime.MultipartEntityBuilder;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.mime.content.ByteArrayBody;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.mime.content.FileBody;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.mime.content.InputStreamBody;</div><div class="line"><span class="keyword">import</span> org.apache.http.impl.client.CloseableHttpClient;</div><div class="line"><span class="keyword">import</span> org.apache.http.impl.client.HttpClients;</div><div class="line"><span class="keyword">import</span> org.apache.http.util.EntityUtils;</div><div class="line"><span class="keyword">import</span> org.springframework.util.FileCopyUtils;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.File;</div><div class="line"><span class="keyword">import</span> java.io.FileInputStream;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.nio.charset.StandardCharsets;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line"></div><div class="line">        String url = <span class="string">"http://localhost:8001/test.json"</span>;</div><div class="line">        String fieldName = <span class="string">"file"</span>;<span class="comment">//接收字段名称</span></div><div class="line">        File file = <span class="keyword">new</span> File(<span class="string">"C:\\Users\\Admin\\Desktop\\example.png"</span>);</div><div class="line">        String fileName = file.getName();<span class="comment">//文件名称</span></div><div class="line">        CloseableHttpClient client = HttpClients.createDefault();</div><div class="line">        HttpPost httpPost = <span class="keyword">new</span> HttpPost(url);</div><div class="line">        MultipartEntityBuilder builder = MultipartEntityBuilder.create();</div><div class="line">        <span class="comment">//设置兼容模式，防止中文文件名乱码</span></div><div class="line">        builder.setCharset(StandardCharsets.UTF_8);</div><div class="line">        builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);</div><div class="line">        builder.addTextBody(<span class="string">"key"</span>, <span class="string">"编码"</span>, ContentType.DEFAULT_TEXT.withCharset(StandardCharsets.UTF_8));<span class="comment">// 没有后面这个编码，中文会乱码</span></div><div class="line">        <span class="comment">//下面是三种发送文件的方式 file、inputStream、byte[]</span></div><div class="line">        <span class="comment">//三种方式可以同时存在</span></div><div class="line">        builder.addPart(fieldName, <span class="keyword">new</span> FileBody(file));<span class="comment">//①</span></div><div class="line">        builder.addPart(fieldName, <span class="keyword">new</span> ByteArrayBody(FileCopyUtils.copyToByteArray(file), fileName));<span class="comment">//②</span></div><div class="line">        builder.addPart(fieldName, <span class="keyword">new</span> InputStreamBody(<span class="keyword">new</span> FileInputStream(file), fileName));<span class="comment">//③</span></div><div class="line">        <span class="comment">//②、③两种方式fileName是关键，没有fileName字段的话（④）接收不到文件</span></div><div class="line">        <span class="comment">//builder.addPart(fieldName, new ByteArrayBody(new FileInputStream(file)));//④</span></div><div class="line">        <span class="comment">//builder.addBinaryBody(fieldName, new FileInputStream(file));//⑤    等同于④</span></div><div class="line"></div><div class="line">        httpPost.setEntity(builder.build());</div><div class="line">        CloseableHttpResponse execute = client.execute(httpPost);</div><div class="line">        <span class="keyword">if</span> (execute.getStatusLine().getStatusCode() == <span class="number">200</span>) &#123;</div><div class="line">            HttpEntity entity = execute.getEntity();</div><div class="line">            System.out.println(EntityUtils.toString(entity));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.http.HttpEntity;</div><div class="line"><span class="keyword">import</span> org.apache.http.client.methods.CloseableHttpResponse;</div><div class="line"><span class="keyword">import</span> org.apache.http.client.methods.HttpPost;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.ContentType;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.mime.HttpMultipartMode;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.mime.MultipartEntityBuilder;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.mime.content.ByteArrayBody;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.mime.content.FileBody;</div><div class="line"><span class="keyword">import</span> org.apache.http.entity.mime.content.InputStreamBody;</div><div class="line"><span class="keyword">import</span> org.apache.http.impl.client.CloseableHttpClient;</div><div class="line"><span class="keyword">import</span> org.apache.http.impl.client.HttpClients;</div><div class="line"><span class="keyword">import</span> org.apache.http.util.EntityUtils;</div><div class="line"><span class="keyword">import</span> org.springframework.util.FileCopyUtils;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.File;</div><div class="line"><span class="keyword">import</span> java.io.FileInputStream;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.nio.charset.StandardCharsets;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line"></div><div class="line">        String url = <span class="string">"http://localhost:8001/test.json"</span>;</div><div class="line">        String fieldName = <span class="string">"file"</span>;<span class="comment">//接收字段名称</span></div><div class="line">        File file = <span class="keyword">new</span> File(<span class="string">"C:\\Users\\Admin\\Desktop\\example.png"</span>);</div><div class="line">        String fileName = file.getName();<span class="comment">//文件名称</span></div><div class="line">        CloseableHttpClient client = HttpClients.createDefault();</div><div class="line">        HttpPost httpPost = <span class="keyword">new</span> HttpPost(url);</div><div class="line">        MultipartEntityBuilder builder = MultipartEntityBuilder.create();</div><div class="line">        <span class="comment">//设置兼容模式，防止中文文件名乱码</span></div><div class="line">        builder.setCharset(StandardCharsets.UTF_8);</div><div class="line">        builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);</div><div class="line">        builder.addTextBody(<span class="string">"key"</span>, <span class="string">"编码"</span>, ContentType.DEFAULT_TEXT.withCharset(StandardCharsets.UTF_8));<span class="comment">// 没有后面这个编码，中文会乱码</span></div><div class="line">        <span class="comment">//下面是三种发送文件的方式 file、inputStream、byte[]</span></div><div class="line">        <span class="comment">//三种方式可以同时存在</span></div><div class="line">        builder.addPart(fieldName, <span class="keyword">new</span> FileBody(file));<span class="comment">//①</span></div><div class="line">        builder.addPart(fieldName, <span class="keyword">new</span> ByteArrayBody(FileCopyUtils.copyToByteArray(file), fileName));<span class="comment">//②</span></div><div class="line">        builder.addPart(fieldName, <span class="keyword">new</span> InputStreamBody(<span class="keyword">new</span> FileInputStream(file), fileName));<span class="comment">//③</span></div><div class="line">        <span class="comment">//②、③两种方式fileName是关键，④⑤这种是没有传fileName的</span></div><div class="line">        <span class="comment">// 没有fileName字段的话 spring mvc multipartFile接收不到文件 可以request.getPart(fieldName).getInputStream()</span></div><div class="line">        builder.addBinaryBody(fieldName, FileCopyUtils.copyToByteArray(file));<span class="comment">//④</span></div><div class="line">        builder.addBinaryBody(fieldName, <span class="keyword">new</span> FileInputStream(file));<span class="comment">//⑤</span></div><div class="line"></div><div class="line">        httpPost.setEntity(builder.build());</div><div class="line">        CloseableHttpResponse execute = client.execute(httpPost);</div><div class="line">        <span class="keyword">if</span> (execute.getStatusLine().getStatusCode() == <span class="number">200</span>) &#123;</div><div class="line">            HttpEntity entity = execute.getEntity();</div><div class="line">            System.out.println(EntityUtils.toString(entity));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -399,6 +424,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/http/" rel="tag"># http</a>
+          
+        </div>
       
 
       
@@ -505,7 +536,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -516,7 +547,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -524,6 +555,13 @@
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
