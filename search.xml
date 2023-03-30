@@ -20,6 +20,27 @@
       </tags>
   </entry>
   <entry>
+    <title>git 方面</title>
+    <url>/2017/08/06/git-%E6%96%B9%E9%9D%A2/</url>
+    <content><![CDATA[<h2 id="接触-Git"><a href="#接触-Git" class="headerlink" title="接触 Git"></a>接触 Git</h2><p>刚开始接触 Git 是在15年8月份，那时刚毕业，第一份工作</p>
+<p>当时同事建议使用 <a href="https://www.sourcetreeapp.com/">sourceTree</a>（ Git 图形化工具），很好用，功能很强大。各种操作、状态都很简单而且直观，便于操作。<br>尤其是当你理解了 Git 的操作流程以后，各种 merge 、 cherry-pick 、 reset 、 rebase 等等操作，使用起来很方便，graph 也非常的直观。</p>
+<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p>后面接触到 <a href="https://www.jetbrains.com/idea/">IDEA</a> ，它自带版本控制，功能、实用性、外观都可以和 sourceTree 相媲美，因为 Idea 基本每天都要使用，sourceTree 使用就少了。</p>
+<p>前不久一同事让我帮忙把一个本地项目上传到 Git 服务上建立一个分支，他本地只有 Git 客户端，当时我就想这还不简单，但后来事实是，我折腾了半天也没有把项目从服务器上 clone 下来。<br>因为我对 Git 命令行完全不熟悉，git-gui 也所知甚少。</p>
+<p>后来我回到自己座位上，上网找了下 gui 的使用方法，也成功的从线上 clone 下来了，基本操作也照着走了一遍。认为也没什么难得就这样。<br>昨天看了一篇文章，讲的是 hexo，也就是现在在使用的东西，今天闲来无事，也就摸索摸索。因为其中又涉及到 Git 的操作，我突然冒出一个想法，想用 Git 命令行走一遍流程，各种问题 QAQ</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p>这个命令我甚至是第一次用到，还有很多命令，我也是基本没有使用过</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> ** <span class="built_in">dir</span></span><br><span class="line">$ git remote add origin **</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>有句话怎么说来着 “用命令行的瞧不起用图像界面的”，想想可能真的不全是在装逼哈哈。<br>命令行是最能体现作者设计的初衷，或许使用图形界面的你，照样可以操作的行云流水，但会使用命令行操作，理解软件的本质，对你的理解、运用会大有裨益。</p>
+<h2 id="千万不要会用了，就万事大吉了，要多去思考，探索总是好的"><a href="#千万不要会用了，就万事大吉了，要多去思考，探索总是好的" class="headerlink" title="千万不要会用了，就万事大吉了，要多去思考，探索总是好的"></a>千万不要会用了，就万事大吉了，要多去思考，探索总是好的</h2>]]></content>
+      <categories>
+        <category>words</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2017/08/06/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -58,27 +79,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git 方面</title>
-    <url>/2017/08/06/git-%E6%96%B9%E9%9D%A2/</url>
-    <content><![CDATA[<h2 id="接触-Git"><a href="#接触-Git" class="headerlink" title="接触 Git"></a>接触 Git</h2><p>刚开始接触 Git 是在15年8月份，那时刚毕业，第一份工作</p>
-<p>当时同事建议使用 <a href="https://www.sourcetreeapp.com/">sourceTree</a>（ Git 图形化工具），很好用，功能很强大。各种操作、状态都很简单而且直观，便于操作。<br>尤其是当你理解了 Git 的操作流程以后，各种 merge 、 cherry-pick 、 reset 、 rebase 等等操作，使用起来很方便，graph 也非常的直观。</p>
-<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p>后面接触到 <a href="https://www.jetbrains.com/idea/">IDEA</a> ，它自带版本控制，功能、实用性、外观都可以和 sourceTree 相媲美，因为 Idea 基本每天都要使用，sourceTree 使用就少了。</p>
-<p>前不久一同事让我帮忙把一个本地项目上传到 Git 服务上建立一个分支，他本地只有 Git 客户端，当时我就想这还不简单，但后来事实是，我折腾了半天也没有把项目从服务器上 clone 下来。<br>因为我对 Git 命令行完全不熟悉，git-gui 也所知甚少。</p>
-<p>后来我回到自己座位上，上网找了下 gui 的使用方法，也成功的从线上 clone 下来了，基本操作也照着走了一遍。认为也没什么难得就这样。<br>昨天看了一篇文章，讲的是 hexo，也就是现在在使用的东西，今天闲来无事，也就摸索摸索。因为其中又涉及到 Git 的操作，我突然冒出一个想法，想用 Git 命令行走一遍流程，各种问题 QAQ</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
-<p>这个命令我甚至是第一次用到，还有很多命令，我也是基本没有使用过</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> ** <span class="built_in">dir</span></span><br><span class="line">$ git remote add origin **</span><br></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>有句话怎么说来着 “用命令行的瞧不起用图像界面的”，想想可能真的不全是在装逼哈哈。<br>命令行是最能体现作者设计的初衷，或许使用图形界面的你，照样可以操作的行云流水，但会使用命令行操作，理解软件的本质，对你的理解、运用会大有裨益。</p>
-<h2 id="千万不要会用了，就万事大吉了，要多去思考，探索总是好的"><a href="#千万不要会用了，就万事大吉了，要多去思考，探索总是好的" class="headerlink" title="千万不要会用了，就万事大吉了，要多去思考，探索总是好的"></a>千万不要会用了，就万事大吉了，要多去思考，探索总是好的</h2>]]></content>
-      <categories>
-        <category>words</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo 我回来了</title>
     <url>/2023/03/29/%E9%9A%8F%E7%AC%94/</url>
     <content><![CDATA[<p>最近在翻看有道云笔记，偶然看到了 17 年的一篇工作日记</p>
@@ -96,16 +96,12 @@
       </tags>
   </entry>
   <entry>
-    <title>test111</title>
-    <url>/2023/03/30/test111/</url>
-    <content><![CDATA[<p>hahahah，能成功吗</p>
-]]></content>
-  </entry>
-  <entry>
     <title>github page 不更新了</title>
     <url>/2023/03/30/%E9%9A%8F%E7%AC%942/</url>
     <content><![CDATA[<p>好久没用了，怎么 github page 不会自动更新了，咋回事儿呀</p>
-]]></content>
+<p>不仅如此，3年了，刚下载了个 node ，版本太高，升级到最新版本也不行，生成的 index.html 乱码，后面尝试降低版本也是一堆问题。</p>
+<p>最后百度了是因为 5.0 版本之后 hexo 删除了一个<a href="https://www.cnblogs.com/lanhualan/p/14588669.html">模块</a>，需要自己手动添加下，我的妈呀，终于出来了</p>
+<h3 id="这下，我真的回来了"><a href="#这下，我真的回来了" class="headerlink" title="这下，我真的回来了"></a>这下，我真的回来了</h3>]]></content>
       <categories>
         <category>words</category>
       </categories>

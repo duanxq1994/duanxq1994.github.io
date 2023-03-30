@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2023-03-30T13:59:29.589Z</updated>
+  <updated>2023-03-30T14:09:35.391Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,40 +17,20 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test111</title>
-    <link href="http://yoursite.com/2023/03/30/test111/"/>
-    <id>http://yoursite.com/2023/03/30/test111/</id>
-    <published>2023-03-30T13:59:15.000Z</published>
-    <updated>2023-03-30T13:59:29.589Z</updated>
-    
-    <content type="html"><![CDATA[<p>hahahah，能成功吗</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;hahahah，能成功吗&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>github page 不更新了</title>
     <link href="http://yoursite.com/2023/03/30/%E9%9A%8F%E7%AC%942/"/>
     <id>http://yoursite.com/2023/03/30/%E9%9A%8F%E7%AC%942/</id>
     <published>2023-03-30T12:07:14.000Z</published>
-    <updated>2023-03-30T12:07:42.817Z</updated>
+    <updated>2023-03-30T14:09:35.391Z</updated>
     
-    <content type="html"><![CDATA[<p>好久没用了，怎么 github page 不会自动更新了，咋回事儿呀</p>]]></content>
+    <content type="html"><![CDATA[<p>好久没用了，怎么 github page 不会自动更新了，咋回事儿呀</p><p>不仅如此，3年了，刚下载了个 node ，版本太高，升级到最新版本也不行，生成的 index.html 乱码，后面尝试降低版本也是一堆问题。</p><p>最后百度了是因为 5.0 版本之后 hexo 删除了一个<a href="https://www.cnblogs.com/lanhualan/p/14588669.html">模块</a>，需要自己手动添加下，我的妈呀，终于出来了</p><h3 id="这下，我真的回来了"><a href="#这下，我真的回来了" class="headerlink" title="这下，我真的回来了"></a>这下，我真的回来了</h3>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;好久没用了，怎么 github page 不会自动更新了，咋回事儿呀&lt;/p&gt;
-</summary>
+&lt;p&gt;不仅如此，3年了，刚下载了个 node ，版本太高，升级到最新版本也不行，生成的 index.html 乱码，后面尝试降低版本也是一堆问题。&lt;/p&gt;
+&lt;p&gt;最后百度了是因为 5.0 版本之后</summary>
       
     
     
