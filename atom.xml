@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>笔记</title>
+  
+  
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2023-03-30T12:07:42.817Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>duan</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>github page 不更新了</title>
+    <link href="http://yoursite.com/2023/03/30/%E9%9A%8F%E7%AC%942/"/>
+    <id>http://yoursite.com/2023/03/30/%E9%9A%8F%E7%AC%942/</id>
+    <published>2023-03-30T12:07:14.000Z</published>
+    <updated>2023-03-30T12:07:42.817Z</updated>
+    
+    <content type="html"><![CDATA[<p>好久没用了，怎么 github page 不会自动更新了，咋回事儿呀</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;好久没用了，怎么 github page 不会自动更新了，咋回事儿呀&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="words" scheme="http://yoursite.com/categories/words/"/>
+    
+    
+    <category term="疑惑" scheme="http://yoursite.com/tags/%E7%96%91%E6%83%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 我回来了</title>
+    <link href="http://yoursite.com/2023/03/29/%E9%9A%8F%E7%AC%94/"/>
+    <id>http://yoursite.com/2023/03/29/%E9%9A%8F%E7%AC%94/</id>
+    <published>2023-03-29T15:44:31.000Z</published>
+    <updated>2023-03-30T12:02:05.441Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在翻看有道云笔记，偶然看到了 17 年的一篇工作日记</p><p>写的是当时去南京银行时的工作日报。内容条理清晰，工作内容、遇到什么问题、怎么解决的、客户的一些吐槽、自己的一些感想</p><p>有点不敢相信这是6年前自己写的东西，想想那时候的自己也是很有干劲，啥也不怕，只身一人去银行出差，现在的自己是不是还不如当时呢，是在舒适圈待久了，还是自己确实变了，不禁内心些许感慨</p><p>但另一方面，也让我见识到了文字的力量，过了多年以后，记忆已经开始模糊，可是看到当时的文字，往事犹如历历在目</p><p>所以我今天又翻出了几年前的hexo，准备写点东西，同时准备研究一下在线笔记类的工具，比如有道云笔记，记录一些的想法或者思路等等。文件同步工具，坚果云，在几个设备上同步文件，可以当一个文件备份工具，同步工具都挺好的</p><p>转眼5、6年过去了，过去的时光总是很快，所以要做点什么，用文字留下当下的一些想法，一方面可以整理自己的思路，另一方面，几年后或者几十年后，看见当时的文字，应该也会有些感触吧</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近在翻看有道云笔记，偶然看到了 17 年的一篇工作日记&lt;/p&gt;
+&lt;p&gt;写的是当时去南京银行时的工作日报。内容条理清晰，工作内容、遇到什么问题、怎么解决的、客户的一些吐槽、自己的一些感想&lt;/p&gt;
+&lt;p&gt;有点不敢相信这是6年前自己写的东西，想想那时候的自己也是很有干劲，啥也不</summary>
+      
+    
+    
+    
+    <category term="words" scheme="http://yoursite.com/categories/words/"/>
+    
+    
+    <category term="想法" scheme="http://yoursite.com/tags/%E6%83%B3%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>guava Maps</title>
+    <link href="http://yoursite.com/2019/11/14/Maps/"/>
+    <id>http://yoursite.com/2019/11/14/Maps/</id>
+    <published>2019-11-14T10:22:14.000Z</published>
+    <updated>2023-03-29T14:45:10.050Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="关于Maps的用法，做一下整理"><a href="#关于Maps的用法，做一下整理" class="headerlink" title="关于Maps的用法，做一下整理"></a>关于Maps的用法，做一下整理</h4><blockquote><p>google的guava包，有很多实用的工具类，可以轻易实现工作中一些常用的功能。</p></blockquote><ul><li>静态map常量<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ImmutableMap&lt;Integer, String&gt; map = ImmutableMap.&lt;Integer, String&gt;builder()</span><br><span class="line">                .put(<span class="number">1</span>, <span class="string">&quot;1&quot;</span>)</span><br><span class="line">                .put(<span class="number">2</span>, <span class="string">&quot;2&quot;</span>)</span><br><span class="line">                .build();</span><br></pre></td></tr></table></figure></li><li>双向映射<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ImmutableBiMap&lt;String, String&gt; biMap = ImmutableBiMap.&lt;String, String&gt;builder()</span><br><span class="line">               .put(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;阿迪&quot;</span>)</span><br><span class="line">               .put(<span class="string">&quot;b&quot;</span>, <span class="string">&quot;百世&quot;</span>)</span><br><span class="line">               .put(<span class="string">&quot;c&quot;</span>, <span class="string">&quot;财通&quot;</span>)</span><br><span class="line">               .put(<span class="string">&quot;d&quot;</span>, <span class="string">&quot;大华&quot;</span>)</span><br><span class="line">               .put(<span class="string">&quot;e&quot;</span>, <span class="string">&quot;e支付&quot;</span>)</span><br><span class="line">               .build();</span><br><span class="line">System.out.println(biMap.get(<span class="string">&quot;c&quot;</span>));</span><br><span class="line">System.out.println(biMap.inverse().get(<span class="string">&quot;百世&quot;</span>));</span><br></pre></td></tr></table></figure></li><li>list 转 map<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// list&lt;V&gt; -&gt; map&lt;K,V&gt;</span></span><br><span class="line">List&lt;Integer&gt; list1 = Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line"><span class="comment">// key 唯一</span></span><br><span class="line">ImmutableMap&lt;String, Integer&gt; map = Maps.uniqueIndex(list1, String::valueOf);</span><br><span class="line">System.out.println(map);</span><br><span class="line">List&lt;Integer&gt; list2 = Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line"><span class="comment">// key 重复</span></span><br><span class="line">ImmutableMultimap&lt;String, Integer&gt; index = Multimaps.index(list2, String::valueOf);</span><br><span class="line">System.out.println(index);</span><br></pre></td></tr></table></figure></li></ul><h4 id="maven-依赖"><a href="#maven-依赖" class="headerlink" title="maven 依赖"></a>maven 依赖</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.guava<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>guava<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>28.1-jre<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;关于Maps的用法，做一下整理&quot;&gt;&lt;a href=&quot;#关于Maps的用法，做一下整理&quot; class=&quot;headerlink&quot; title=&quot;关于Maps的用法，做一下整理&quot;&gt;&lt;/a&gt;关于Maps的用法，做一下整理&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;googl</summary>
+      
+    
+    
+    
+    <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+    <category term="guava" scheme="http://yoursite.com/tags/guava/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 httpclient 发送post请求</title>
+    <link href="http://yoursite.com/2017/08/17/http/"/>
+    <id>http://yoursite.com/2017/08/17/http/</id>
+    <published>2017-08-17T15:24:51.000Z</published>
+    <updated>2023-03-29T14:45:10.050Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.http.HttpEntity;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.methods.CloseableHttpResponse;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.client.methods.HttpPost;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.entity.ContentType;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.entity.mime.HttpMultipartMode;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.entity.mime.MultipartEntityBuilder;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.entity.mime.content.ByteArrayBody;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.entity.mime.content.FileBody;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.entity.mime.content.InputStreamBody;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.impl.client.CloseableHttpClient;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.impl.client.HttpClients;</span><br><span class="line"><span class="keyword">import</span> org.apache.http.util.EntityUtils;</span><br><span class="line"><span class="keyword">import</span> org.springframework.util.FileCopyUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.nio.charset.StandardCharsets;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;http://localhost:8001/test.json&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">fieldName</span> <span class="operator">=</span> <span class="string">&quot;file&quot;</span>;<span class="comment">//接收字段名称</span></span><br><span class="line">        <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;C:\\Users\\Admin\\Desktop\\example.png&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">fileName</span> <span class="operator">=</span> file.getName();<span class="comment">//文件名称</span></span><br><span class="line">        <span class="type">CloseableHttpClient</span> <span class="variable">client</span> <span class="operator">=</span> HttpClients.createDefault();</span><br><span class="line">        <span class="type">HttpPost</span> <span class="variable">httpPost</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HttpPost</span>(url);</span><br><span class="line">        <span class="type">MultipartEntityBuilder</span> <span class="variable">builder</span> <span class="operator">=</span> MultipartEntityBuilder.create();</span><br><span class="line">        <span class="comment">//设置兼容模式，防止中文文件名乱码</span></span><br><span class="line">        builder.setCharset(StandardCharsets.UTF_8);</span><br><span class="line">        builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);</span><br><span class="line">        builder.addTextBody(<span class="string">&quot;key&quot;</span>, <span class="string">&quot;编码&quot;</span>, ContentType.DEFAULT_TEXT.withCharset(StandardCharsets.UTF_8));<span class="comment">// 没有后面这个编码，中文会乱码</span></span><br><span class="line">        <span class="comment">//下面是三种发送文件的方式 file、inputStream、byte[]</span></span><br><span class="line">        <span class="comment">//三种方式可以同时存在</span></span><br><span class="line">        builder.addPart(fieldName, <span class="keyword">new</span> <span class="title class_">FileBody</span>(file));<span class="comment">//1</span></span><br><span class="line">        builder.addPart(fieldName, <span class="keyword">new</span> <span class="title class_">ByteArrayBody</span>(FileCopyUtils.copyToByteArray(file), fileName));<span class="comment">//2</span></span><br><span class="line">        builder.addPart(fieldName, <span class="keyword">new</span> <span class="title class_">InputStreamBody</span>(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(file), fileName));<span class="comment">//3</span></span><br><span class="line">        <span class="comment">// 2、3两种方式fileName是关键</span></span><br><span class="line">        <span class="comment">// 4、5这种是没有传fileName的</span></span><br><span class="line">        <span class="comment">// 没有fileName字段的话 spring mvc multipartFile接收不到文件</span></span><br><span class="line">        <span class="comment">// 可以request.getPart(fieldName).getInputStream()</span></span><br><span class="line">        builder.addBinaryBody(fieldName, FileCopyUtils.copyToByteArray(file));<span class="comment">//4</span></span><br><span class="line">        builder.addBinaryBody(fieldName, <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(file));<span class="comment">//5</span></span><br><span class="line"></span><br><span class="line">        httpPost.setEntity(builder.build());</span><br><span class="line">        <span class="type">CloseableHttpResponse</span> <span class="variable">execute</span> <span class="operator">=</span> client.execute(httpPost);</span><br><span class="line">        <span class="keyword">if</span> (execute.getStatusLine().getStatusCode() == <span class="number">200</span>) &#123;</span><br><span class="line">            <span class="type">HttpEntity</span> <span class="variable">entity</span> <span class="operator">=</span> execute.getEntity();</span><br><span class="line">            System.out.println(EntityUtils.toString(entity));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="maven-依赖"><a href="#maven-依赖" class="headerlink" title="maven 依赖"></a>maven 依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.httpcomponents<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>httpmime<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.3.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span c</summary>
+      
+    
+    
+    
+    <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+    <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git 方面</title>
+    <link href="http://yoursite.com/2017/08/06/git-%E6%96%B9%E9%9D%A2/"/>
+    <id>http://yoursite.com/2017/08/06/git-%E6%96%B9%E9%9D%A2/</id>
+    <published>2017-08-06T12:13:48.000Z</published>
+    <updated>2023-03-29T16:13:00.458Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="接触-Git"><a href="#接触-Git" class="headerlink" title="接触 Git"></a>接触 Git</h2><p>刚开始接触 Git 是在15年8月份，那时刚毕业，第一份工作</p><p>当时同事建议使用 <a href="https://www.sourcetreeapp.com/">sourceTree</a>（ Git 图形化工具），很好用，功能很强大。各种操作、状态都很简单而且直观，便于操作。<br>尤其是当你理解了 Git 的操作流程以后，各种 merge 、 cherry-pick 、 reset 、 rebase 等等操作，使用起来很方便，graph 也非常的直观。</p><h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><p>后面接触到 <a href="https://www.jetbrains.com/idea/">IDEA</a> ，它自带版本控制，功能、实用性、外观都可以和 sourceTree 相媲美，因为 Idea 基本每天都要使用，sourceTree 使用就少了。</p><p>前不久一同事让我帮忙把一个本地项目上传到 Git 服务上建立一个分支，他本地只有 Git 客户端，当时我就想这还不简单，但后来事实是，我折腾了半天也没有把项目从服务器上 clone 下来。<br>因为我对 Git 命令行完全不熟悉，git-gui 也所知甚少。</p><p>后来我回到自己座位上，上网找了下 gui 的使用方法，也成功的从线上 clone 下来了，基本操作也照着走了一遍。认为也没什么难得就这样。<br>昨天看了一篇文章，讲的是 hexo，也就是现在在使用的东西，今天闲来无事，也就摸索摸索。因为其中又涉及到 Git 的操作，我突然冒出一个想法，想用 Git 命令行走一遍流程，各种问题 QAQ</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure><p>这个命令我甚至是第一次用到，还有很多命令，我也是基本没有使用过</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> ** <span class="built_in">dir</span></span><br><span class="line">$ git remote add origin **</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>有句话怎么说来着 “用命令行的瞧不起用图像界面的”，想想可能真的不全是在装逼哈哈。<br>命令行是最能体现作者设计的初衷，或许使用图形界面的你，照样可以操作的行云流水，但会使用命令行操作，理解软件的本质，对你的理解、运用会大有裨益。</p><h2 id="千万不要会用了，就万事大吉了，要多去思考，探索总是好的"><a href="#千万不要会用了，就万事大吉了，要多去思考，探索总是好的" class="headerlink" title="千万不要会用了，就万事大吉了，要多去思考，探索总是好的"></a>千万不要会用了，就万事大吉了，要多去思考，探索总是好的</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;接触-Git&quot;&gt;&lt;a href=&quot;#接触-Git&quot; class=&quot;headerlink&quot; title=&quot;接触 Git&quot;&gt;&lt;/a&gt;接触 Git&lt;/h2&gt;&lt;p&gt;刚开始接触 Git 是在15年8月份，那时刚毕业，第一份工作&lt;/p&gt;
+&lt;p&gt;当时同事建议使用 &lt;a href</summary>
+      
+    
+    
+    
+    <category term="words" scheme="http://yoursite.com/categories/words/"/>
+    
+    
+    <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/08/06/hello-world/"/>
+    <id>http://yoursite.com/2017/08/06/hello-world/</id>
+    <published>2017-08-06T12:10:40.000Z</published>
+    <updated>2017-08-23T15:53:52.068Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    <category term="hello" scheme="http://yoursite.com/categories/hello/"/>
+    
+    
+    <category term="hello" scheme="http://yoursite.com/tags/hello/"/>
+    
+  </entry>
+  
+</feed>
